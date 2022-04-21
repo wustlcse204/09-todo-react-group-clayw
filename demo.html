@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <title>Assignment 8 ToDo</title>
+
+ <link href = "style.css" rel = "stylesheet">
+
+</head>
+
+<body>
+
+ 
+ <div class="content">
+
+      <h1> To Do List </h1>
+
+      <input type="text" id="box" onkeyup="enterKeyPress(event)" placeholder="Enter Your To Do List Here">
+
+      <button type="button" id="entry" onclick="addItem()">Submit</button>
+
+      <p id="list"></p>
+
+ </div>
+
+
+ <script>
+
+      var xhttp = new XMLHttpRequest();
+
+      xhttp.onreadystatechange = function ()
+
+       {
+
+          if (this.readyState == 4 && this.status == 200)
+
+          {
+
+              var things = JSON.parse(this.responseText);
+
+              for (i = things.length - 1; i >= 0; i--)
+
+              {
+
+                  var account = document.createElement("li");
+
+                  account.innerHTML = things[i].text;
+
+                  account.setAttribute("id", things[i].id);
+
+                  account.setAttribute("class", "unchecked");
+
+                  account.addEventListener('click', function ()
+
+                  {
+
+                          this.classList.toggle("completed");
+
+                  });
+
+                  var delButt = document.createElement("button");
+
+                  delButt.innerHTML = "X";
+
+                  delButt.setAttribute("class", "btn");
+
+                  delButt.addEventListener('click', remove);
+
+                  account.appendChild(delButt);
+
+                  document.getElementById("list").appendChild(account);
+
+              }
+
+          }
+
+      };
+
+      xhttp.open("GET", "https://cse204.work/todos", true);
+
+      xhttp.setRequestHeader("x-api-key", "6db84e-9b7d7b-e1f7af-25c0ce-80bbfd");
+
+      xhttp.send();
+
+ 
+
+ 
+
+      function addItem()
+
+      {
+
+          var val = { text: document.getElementById("box").value }
+
+          var xhttp = new XMLHttpRequest();
+
+          xhttp.onreadystatechange = function ()
+
+           {
+
+              if (this.readyState == 4 && this.status == 200)
+
+              {
+
+                  var things = JSON.parse(this.responseText);
+
+                  var account = document.createElement("li");
+
+                  account.innerHTML = document.getElementById("box").value;
+
+                  account.setAttribute("id", things.id);
+
+                  account.setAttribute("class", "unchecked");
+
+                  account.addEventListener('click', function ()
+
+                  {
+
+                          this.classList.toggle("completed");
+
+                  });
+
+                  var delButt = document.createElement("button");
+
+                  delButt.innerHTML = "X";
+
+                  delButt.setAttribute("class", "btn");
+
+                  delButt.addEventListener('click', remove);
+
+                  document.getElementById("box").value = "";
+
+                  document.getElementById("list").appendChild(account);
+
+                  account.appendChild(delButt);
+
+              }
+
+          };
+
+          xhttp.open("POST", "https://cse204.work/todos", true);
+
+          xhttp.setRequestHeader("Content-type", "application/json");
+
+          xhttp.setRequestHeader("x-api-key", "6db84e-9b7d7b-e1f7af-25c0ce-80bbfd");
+
+          xhttp.send(JSON.stringify(val));
+
+      }
+
+ 
+
+      function remove()
+
+      {
+
+          var xhttp = new XMLHttpRequest();
+
+          var expunge = this.parentNode;
+
+          xhttp.onreadystatechange = function ()
+
+          {
+
+              if (this.readyState == 4 && this.status == 200)
+
+              {
+
+                  document.getElementById("list").removeChild(expunge);
+
+              }
+
+          };
+
+          xhttp.open("DELETE", "https://cse204.work/todos/" + expunge.id, true);
+
+          xhttp.setRequestHeader("x-api-key", "6db84e-9b7d7b-e1f7af-25c0ce-80bbfd");
+
+          xhttp.send();
+
+      }
+
+
+      function enterKeyPress(event)
+
+      {
+
+          if (event.keyCode === 13)
+
+          {
+
+              document.getElementById("entry").click();
+
+          }
+
+      }
+
+ </script>
+
+ 
+
+</body>
+
+</html>
