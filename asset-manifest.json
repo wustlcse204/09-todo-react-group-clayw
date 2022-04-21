@@ -1,13 +1,13 @@
 {
-  "main.css": "/09-todo-react-clayw/static/css/main.1af24ae9.chunk.css",
-  "main.js": "/09-todo-react-clayw/static/js/main.e00a7dec.chunk.js",
-  "main.js.map": "/09-todo-react-clayw/static/js/main.e00a7dec.chunk.js.map",
-  "static/js/1.0cdd6f18.chunk.js": "/09-todo-react-clayw/static/js/1.0cdd6f18.chunk.js",
-  "static/js/1.0cdd6f18.chunk.js.map": "/09-todo-react-clayw/static/js/1.0cdd6f18.chunk.js.map",
-  "runtime~main.js": "/09-todo-react-clayw/static/js/runtime~main.772f9b0f.js",
-  "runtime~main.js.map": "/09-todo-react-clayw/static/js/runtime~main.772f9b0f.js.map",
-  "static/css/main.1af24ae9.chunk.css.map": "/09-todo-react-clayw/static/css/main.1af24ae9.chunk.css.map",
-  "index.html": "/09-todo-react-clayw/index.html",
-  "precache-manifest.b4afe8c3b6195a8a681e794a62039d57.js": "/09-todo-react-clayw/precache-manifest.b4afe8c3b6195a8a681e794a62039d57.js",
-  "service-worker.js": "/09-todo-react-clayw/service-worker.js"
+  "main.css": "/09-todo-react-group-clayw/static/css/main.1af24ae9.chunk.css",
+  "main.js": "/09-todo-react-group-clayw/static/js/main.e00a7dec.chunk.js",
+  "main.js.map": "/09-todo-react-group-clayw/static/js/main.e00a7dec.chunk.js.map",
+  "static/js/1.0cdd6f18.chunk.js": "/09-todo-react-group-clayw/static/js/1.0cdd6f18.chunk.js",
+  "static/js/1.0cdd6f18.chunk.js.map": "/09-todo-react-group-clayw/static/js/1.0cdd6f18.chunk.js.map",
+  "runtime~main.js": "/09-todo-react-group-clayw/static/js/runtime~main.70295dad.js",
+  "runtime~main.js.map": "/09-todo-react-group-clayw/static/js/runtime~main.70295dad.js.map",
+  "static/css/main.1af24ae9.chunk.css.map": "/09-todo-react-group-clayw/static/css/main.1af24ae9.chunk.css.map",
+  "index.html": "/09-todo-react-group-clayw/index.html",
+  "precache-manifest.05c9dcecf2a2c1e5f251149442fd9d4e.js": "/09-todo-react-group-clayw/precache-manifest.05c9dcecf2a2c1e5f251149442fd9d4e.js",
+  "service-worker.js": "/09-todo-react-group-clayw/service-worker.js"
 }
