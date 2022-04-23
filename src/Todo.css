@@ -27,21 +27,29 @@ h1
     margin:10px auto;
     color: white;
 }
-
-.todo-container {
+.todo_container{
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 300px;
 }
+@media screen and (max-width: 600px) {
+.todo_container{
+    width: 100%;
+}
+}
+
+
 .todo {
     display: flex;
     border-radius:.4rem;
     background-color: azure;
     border: solid 1px #c3c3c3;
     padding: .6rem 1.5rem;
-    justify-content: 'space-between';
+    justify-content: space-between;
     align-items: 'center';
-
+width: 100%;
+margin: 2px auto;
 }
 .todo > p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -55,4 +63,20 @@ h1
     justify-content: center;
     flex-direction: column;
 margin-left: 3rem;
+}
+button {
+    margin-left: auto;
+    background-color: darkblue;
+    border-radius: 900px;
+    border: solid white 2px;
+color:white;
+padding: 5px 10px;
+cursor: pointer;
+}
+button.done {
+    background-color: greenyellow;
+    color:darkblue;
+}
+button:hover {
+    background-color: darkcyan;
 }

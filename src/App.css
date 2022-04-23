@@ -1,0 +1,70 @@
+body
+{
+    background-color: white;
+}
+h1
+{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+#box
+{
+    display: block;
+    text-align: center;
+    width: 250px;
+    height: 25px;
+    padding: 6px;
+    font-size: 20px;
+    margin: 10px auto;
+}
+#entry
+{
+    display: block;
+    background-color: blue;
+    float:none;
+    height: auto;
+    width: auto;
+    position: relative;
+    margin:10px auto;
+    color: white;
+}
+p li
+{
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    text-align: center;
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 25px;
+    width: 100%;
+    padding: 20px auto;
+}
+p li:hover
+{
+    background-color: gray;
+}
+p li.completed
+{
+    color: white;
+    background: gray;
+    text-decoration: line-through;
+}
+button
+{
+    position: absolute;
+    border: none;
+    right: 0;
+    padding: 6px 10px;
+    background-color: transparent;
+    height:auto;
+    width: auto;
+    margin: auto 10px;
+    color: black;
+}
+button:hover, #submit:hover
+{
+    cursor: pointer;
+    background-color: cyan;
+}
